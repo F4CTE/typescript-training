@@ -13,7 +13,12 @@ describe('enhanced object literals', () => {
         //   return `${this.name} wants to play with ${target.name} ${target.dead ? 'but he is' : 'and he is not'} dead`;
         // }
         // - do that in ES6 !
-      }
+        name,
+        dead,
+        wantsToPlayWith(target){
+          return  `${this.name} wants to play with ${target.name} ${target.dead ? 'but he is' :  'and he is not'} dead`;
+        }
+      };
     }
 
     const john = createBeatle('John', true)
